@@ -1,0 +1,4 @@
+/build
+/.gradle
+/.idea
+/go_workspace/src/io.grpdc.demo/generated

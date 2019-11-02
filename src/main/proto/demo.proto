@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.company.slack";
+
+package com.company.slack;
+
+service Slack {
+
+    rpc SendMessage (Message) returns (Empty);
+
+    rpc SendMessages (stream Message) returns (Empty);
+
+    rpc ReceiveMessages (Empty) returns (stream Message);
+
+    rpc ReceiveAndSendMessages (stream Message) returns (stream Message);
+
+}
+
+message Message {
+    // if not for the demo, we could also use Timestamp type from: import "google/protobuf/timestamp.proto";
+    string text = 1;
+    int64 timestamp = 2;
+}
+
+message Empty {
+    // if not for the demo, we could also use Empty type from: import "google/protobuf/empty.proto";
+}
