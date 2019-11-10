@@ -6,7 +6,7 @@ For Java / Kotlin:
 ./gradlew generateProto
 ```
 
-For GO:
+For Go:
 ```
 protoc -I src/main/proto src/main/proto/demo.proto --go_out=plugins=grpc:go_workspace/src/io.grpdc.demo/generated
 ```
@@ -17,13 +17,13 @@ For Java / Kotlin:
 ./gradlew build
 ```
 
-For GO:
+For Go:
 ```
 go build -o build io.grpdc.demo
 ```
 
 ## Run
-For GO:
+For Go:
 ```
 go run io.grpdc.demo
 ```
