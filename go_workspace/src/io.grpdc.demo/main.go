@@ -27,7 +27,7 @@ func main() {
 	message := &demo.Message{Text: "Hello from Gopher", Timestamp: time.Now().UnixNano() / 1e6}
 
 	slackClient := demo.NewSlackClient(connection)
-	_, callError := slackClient.PostMessage(callContext, message)
+	_, callError := slackClient.SendMessage(callContext, message)
 	if callError != nil {
 		log.Fatalf("Got error response: %v", callError)
 	}
